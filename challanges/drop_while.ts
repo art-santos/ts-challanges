@@ -7,16 +7,21 @@ export default function dropWhile<T>(
 
     const m: Array<boolean> = arr.map(predicate);
 
-    const li = m.lastIndexOf(true)
+    const li = m.indexOf(false)
 
-    const finalSlice = arr.slice(li  + 1, arr.length)
 
+    let finalSlice: Array<T> = []    
+    if (li !== -1){
+        finalSlice = arr.slice(li, arr.length)
+    }
+
+    console.log(li, finalSlice)
     console.log(finalSlice)
     return finalSlice
   }
 
 
 
-   dropWhile([1,2,3,4,5], (value) => value < 6)
+   dropWhile([20, 30, 40, 5, 6],(value) => value > 3)
 
 
