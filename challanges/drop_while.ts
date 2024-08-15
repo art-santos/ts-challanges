@@ -14,14 +14,11 @@ export default function dropWhile<T>(
     if (li !== -1){
         finalSlice = arr.slice(li, arr.length)
     }
-
-    console.log(li, finalSlice)
-    console.log(finalSlice)
     return finalSlice
   }
 
 
 
-   dropWhile([20, 30, 40, 5, 6],(value) => value > 3)
+   dropWhile([20, 30, 40, 5, 6],(value) => value > Array.length)
 
 
