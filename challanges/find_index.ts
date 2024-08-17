@@ -3,29 +3,34 @@ export default function findIndex<T>(
     predicate: (value: T, index: number, array: Array<T>) => boolean,
     fromIndex = 0,
   ): number {
-    // //slice the array accordingly
-    // const sliceArrayToMatchRequiredIndex = fromIndex === 0 ? [...array] : [...array].slice(fromIndex, array.length) 
-    
-    // //get an evaluation for each item in the array that matches the predicate requirements
-    // const findFirstPositiveItem = sliceArrayToMatchRequiredIndex.map(predicate)
 
-    // //get first index of true
-    // const getFirstTruthIndex = findFirstPositiveItem.indexOf(true)
+    //shallow copy the array
+    const shallowCopy = [...array]
 
-    // //get the first number from array position and reassoacite this as number
-    // const firstTruthIndex = sliceArrayToMatchRequiredIndex[getFirstTruthIndex] as number
+    //map the shallow copy to the which item matches the requirements
+    const truthMap = shallowCopy.map(predicate)
 
-    // //returns the index of the found element, else return -1
-    // return firstTruthIndex
+    //get the first occurrency of a truth. value on the map
+    const firstOccurencyIndex = truthMap.indexOf(true, fromIndex)
 
-    return 0    
+    //if nothing is found return -1
+    if(firstOccurencyIndex === -1){
+        return -1
+    }
+
+    //get the first value based on the array indexes
+    const firstOccurrencyValue: number = firstOccurencyIndex as number
+
+
+    return firstOccurrencyValue
   }
 
-  
 
+//   const arr = [1,2,3,4,5]
 
-  const arr = [1,2,3,4,5]
-  const getIndex = findIndex(arr, (value) => {return value > 3}, 1)
+    const arr = [5, 12, 8, 130, 44]
+
+  const getIndex = findIndex(arr, (num: number) => num >= 12, 5)
   console.log("🚀 ~ getIndex:", getIndex)
 
 
