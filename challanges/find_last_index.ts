@@ -4,40 +4,31 @@ export default function findLastIndex<T>(
     fromIndex = array.length - 1,
   ): number {
     
-    const isFromIndexNegativeOrPositive = fromIndex >= 0 ? true : false
+    const negativeArrayLength = array.length * -1
     
-    let result = 0
+    const checkIsIndexOutOfBound = fromIndex < negativeArrayLength || fromIndex > array.length - 1
 
-    if (!isFromIndexNegativeOrPositive) {
-      const reversedArray = [...array].reverse()
-      const reversedIndex = (fromIndex * -1) - 1
-      const reversedSlicedArray = reversedArray.slice(0, reversedIndex + 1)
-
-      const reversedFilter = reversedSlicedArray.map(predicate)
-      const getReversedLastIndexOf = reversedFilter.findIndex((value) => value === true)
-
-      result = getReversedLastIndexOf
+    if (checkIsIndexOutOfBound && fromIndex >= 0) {
+      fromIndex = array.length - 1
     }
 
-    if (isFromIndexNegativeOrPositive) {
-      const newArray = [...array]
-      const newIndex = (fromIndex)
-      const newSlicedArray = newArray.slice(0, newIndex + 1)
-
-      const newFilter = newSlicedArray.map(predicate)
-      const getNewLastIndexOf = newFilter.findIndex((value) => value === true)
-
-      console.log(getNewLastIndexOf)
-
-      result = getNewLastIndexOf
+    if (checkIsIndexOutOfBound && fromIndex < 0) {
+      fromIndex = 0
+    }
+ 
+  
+    if (fromIndex < 0){
+      fromIndex = (fromIndex * -1) - 1
     }
 
-    console.log(result)
-
-    return result
+    console.log(fromIndex)
+    const lastIndex = array.findLastIndex((value, index, array) => index >= fromIndex && predicate(value, index, array))
+    console.log("🚀 ~ lastIndex:", lastIndex)
+    
+    return lastIndex
   }
 
 
   const arr = [5,4,3,2,1]
 
-  findLastIndex(arr, (value) => value > 0, 10 )
+  findLastIndex(arr, (value) => value > 3 )
