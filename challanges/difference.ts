@@ -18,4 +18,6 @@ export default function difference<T>(
     4: difference([1, , 3], [1]) // => [3]
   }
 
+  
+
   console.log(obj)
