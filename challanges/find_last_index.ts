@@ -3,32 +3,41 @@ export default function findLastIndex<T>(
     predicate: (value: T, index: number, array: Array<T>) => boolean,
     fromIndex = array.length - 1,
   ): number {
-    
-    const negativeArrayLength = array.length * -1
-    
-    const checkIsIndexOutOfBound = fromIndex < negativeArrayLength || fromIndex > array.length - 1
 
-    if (checkIsIndexOutOfBound && fromIndex >= 0) {
-      fromIndex = array.length - 1
+
+    if (fromIndex < array.length * -1 ) {
+        fromIndex = 0
     }
 
-    if (checkIsIndexOutOfBound && fromIndex < 0) {
-      fromIndex = 0
-    }
- 
-  
-    if (fromIndex < 0){
-      fromIndex = (fromIndex * -1) - 1
+    if (fromIndex > array.length) {
+        fromIndex = array.length - 1
     }
 
+    //shallow copy the array
+    const shallowCopy = [...array]
+
+    //map the shallow copy to the which item matches the requirements
+    const truthMap = shallowCopy.map(predicate)
+
+    //get the first occurrency of a truth. value on the map
     console.log(fromIndex)
-    const lastIndex = array.findLastIndex((value, index, array) => index >= fromIndex && predicate(value, index, array))
-    console.log("🚀 ~ lastIndex:", lastIndex)
-    
-    return lastIndex
+    const firstOccurencyIndex = truthMap.lastIndexOf(true, fromIndex)
+
+    //if nothing is found return -1
+    if(firstOccurencyIndex === -1){
+        return -1
+    }
+
+    //get the first value based on the array indexes
+    const firstOccurrencyValue: number = firstOccurencyIndex as number
+
+
+    return firstOccurrencyValue
   }
 
 
-  const arr = [5,4,3,2,1]
+  const arr = [1, 2, 3, 4, 5, 1]
 
-  findLastIndex(arr, (value) => value > 3 )
+ const lastIndex = findLastIndex(arr, (value) => value > 2)
+
+  console.log("🚀 ~ lastIndex:", lastIndex)
