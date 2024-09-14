@@ -13,4 +13,8 @@
  *    c. Enqueue all unvisited adjacent nodes to the queue and mark them as visited.
  * 
  * BFS is particularly useful for finding the shortest path on unweighted graphs, as it guarantees the minimum number of edges will be traversed.
-
+ * It is also employed in scenarios such as network broadcasting, garbage collection algorithms, and in solving puzzles or games (like finding the number of moves needed to solve a puzzle).
+ * 
+ * The time complexity of BFS is O(V + E), where V is the number of vertices and E is the number of edges in the graph. The space complexity is O(V), 
+ * due to the storage needed for the queue and the visited nodes tracking.
+ */
