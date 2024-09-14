@@ -1,3 +1,5 @@
+export {};
+
 declare global {
   interface Function {
     myApply(this: Function, thisArg: any, argArray?: any[]): any;
