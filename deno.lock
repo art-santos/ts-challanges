@@ -5,6 +5,7 @@
       "jsr:@es-toolkit/es-toolkit": "jsr:@es-toolkit/es-toolkit@1.20.0",
       "jsr:@es-toolkit/es-toolkit@^1.20.0": "jsr:@es-toolkit/es-toolkit@1.20.0",
       "jsr:@luca/flag@^1.0.1": "jsr:@luca/flag@1.0.1",
+      "jsr:@std/assert": "jsr:@std/assert@1.0.5",
       "jsr:@std/assert@^1.0.5": "jsr:@std/assert@1.0.5",
       "jsr:@std/fs@^1.0.3": "jsr:@std/fs@1.0.3",
       "jsr:@std/internal@^1.0.3": "jsr:@std/internal@1.0.3",
