@@ -7,3 +7,16 @@ export default function limit<TParams extends any[], TResult>(
 ): Func<TParams, TResult> {
   throw 'Not implemented!';
 }
+
+
+
+function sum(a: number, b: number) {
+    return a + b;
+}
+
+const limited = limit(sum, 1);
+
+
+limited(1,2); // 3
+
+
