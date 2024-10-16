@@ -20,3 +20,4 @@ export default function promiseTimeout<T>(
 //     },
 //   });
 //   await resolvedThenable; // 42
+
