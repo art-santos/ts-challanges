@@ -25,4 +25,4 @@ export default function mergeData(sessions: Array<Session>): Array<Session> {
 //   { user: 7, duration: 450, equipment: ['bike', 'dumbbell', 'kettlebell'] },
 //   { user: 1, duration: 10, equipment: ['barbell'] },
 //   { user: 2, duration: 400, equipment: ['bike', 'treadmill'] },
-// ];
+// ]; 
