@@ -5,6 +5,8 @@ export function fill<T>(
     end: number = array.length,
   ): Array<any> {
     
-    return []
+    const replacedArray = array.map((x) => x = value)
+
+    return replacedArray
 }
 

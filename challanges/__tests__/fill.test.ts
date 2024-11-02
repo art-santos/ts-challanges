@@ -8,18 +8,18 @@ const array = [[1,2,3], [4, 6, 8, 10], [4, 6, 8, 10, 12]]
 
 Deno.test("Uses the fill function in the first array", () => {
     const fillFirst = fill(array[0], 'a'); // ['a', 'a', 'a']
-    assertEquals(fillFirst, [])
+    assertEquals(fillFirst, ['a', 'a', 'a'])
 })
 
 
 Deno.test("Uses the fill function in the first array", () => {
-    const fillFirst = fill(array[1], 'a'); // ['a', 'a', 'a']
-    assertEquals(fillFirst, [])
+    const fillFirst = fill(array[1], 'a'); // ['a', 'a', 'a','a']
+    assertEquals(fillFirst, ['a', 'a', 'a', 'a'])
 })
 
 
 Deno.test("Uses the fill function in the first array", () => {
-    const fillFirst = fill(array[2], 'a'); // ['a', 'a', 'a']
-    assertEquals(fillFirst, [])
+    const fillFirst = fill(array[2], 'a'); // ['a', 'a', 'a', 'a', 'a']
+    assertEquals(fillFirst, ['a', 'a', 'a', 'a', 'a'])
 })
 
