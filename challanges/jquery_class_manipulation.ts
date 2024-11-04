@@ -32,3 +32,20 @@ interface JQuery {
       },
     };
   }
+
+
+// <button class="foo bar">Click me</button>
+// $('button').toggleClass('bar'); // <button class="foo">Click me</button>
+// $('button').addClass('baz'); // <button class="foo baz">Click me</button>
+// $('button').removeClass('foo'); // <button class="baz">Click me</button>
+// $('button').toggleClass('bar'); // <button class="baz bar">Click me</button>
+// The return value of most jQuery manipulation APIs is the jQuery object itself so that method calls can be chained. The above can be further simplified again:
+
+
+// <button class="foo bar">Click me</button>
+// $('button')
+//   .toggleClass('bar')
+//   .addClass('baz')
+//   .removeClass('foo')
+//   .toggleClass('bar');
+// <button class="baz bar">Click me</button>
