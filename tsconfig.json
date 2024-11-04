@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+      "lib": ["es5", "dom"],  // Ensure 'dom' is included here
+      "target": "es5",
+      "module": "commonjs"
+      // other options...
+    }
+  }
