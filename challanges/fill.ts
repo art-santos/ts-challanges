@@ -11,10 +11,13 @@ export function fill<T>(
     return replacedArray
 }
 
-
+const testcall = fill([1, 2, 3], 'a');
 
 //HOW THE CODE SHOULD LOOK LIKE
 
+// fill([1, 2, 3], 'a'); // ['a', 'a', 'a']
+// fill([4, 6, 8, 10], '*', 1, 3); // [4, '*', '*', 10]
+// fill([4, 6, 8, 10, 12], '*', -3, -1); // [4, 6, '*', '*', 12]
 
 
 
