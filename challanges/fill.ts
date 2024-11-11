@@ -6,7 +6,15 @@ export function fill<T>(
   ): Array<any> {
     
     const replacedArray = array.map((x) => x = value)
-
+    console.log("🚀 ~ replacedArray:", replacedArray)
+    
     return replacedArray
 }
+
+
+
+//HOW THE CODE SHOULD LOOK LIKE
+
+
+
 
