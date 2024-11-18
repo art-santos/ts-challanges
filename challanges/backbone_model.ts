@@ -51,3 +51,11 @@ export default class BackboneModel implements IBackboneModel {
     throw 'Not implemented!';
   }
 }
+
+
+const person1 = new BackboneModel();
+const person2 = new BackboneModel({ name: 'John', age: 32 });
+
+console.log(person1, person2)
+
+
