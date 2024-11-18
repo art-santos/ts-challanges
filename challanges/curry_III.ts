@@ -12,10 +12,10 @@ function multiply(...numbers: any) {
   console.log(multiplyByThree); // 3
   console.log(multiplyByThree(4)); // 12
   
-  const multiplyByFifteen = multiplyByThree(5);
-  console.log(multiplyByFifteen); // 15
-  console.log(multiplyByFifteen(2)); // 30
+//   const multiplyByFifteen = multiplyByThree(5);
+//   console.log(multiplyByFifteen); // 15
+//   console.log(multiplyByFifteen(2)); // 30
   
-  console.log(curriedMultiply(1)(2)(3)(4)); // 24
-  console.log(curriedMultiply(1, 2, 3, 4)); // 24
+//   console.log(curriedMultiply(1)(2)(3)(4)); // 24
+//   console.log(curriedMultiply(1, 2, 3, 4)); // 24
   
