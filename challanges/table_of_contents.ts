@@ -30,7 +30,7 @@ export default function tableOfContents(doc: Document): string {
 
 
 //HOW THE PRINT SHOULD LOOK LIKE
-// Pretty-printed for readability.
+
 `<ul>
   <li>
     Heading1
