@@ -29,3 +29,26 @@ export default function tableOfContents(doc: Document): string {
 }
 
 
+//HOW THE PRINT SHOULD LOOK LIKE
+// Pretty-printed for readability.
+`<ul>
+  <li>
+    Heading1
+    <ul>
+      <li>Heading2a</li>
+      <li>
+        Heading2b
+        <ul>
+          <li>Heading3a</li>
+          <li>
+            Heading3b
+            <ul>
+              <li>Heading4</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Heading2c</li>
+    </ul>
+  </li>
+</ul>`;
