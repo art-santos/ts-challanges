@@ -5,13 +5,25 @@ export function fill<T>(
     end: number = array.length,
   ): Array<any> {
     
-    const replacedArray = array.map((x) => x = value)
+    const arr = [...array]
+    const replacedArray = array.map((v, i, array) => {
+      if (i === start) {
+        console.log(array[i], value)
+        arr[i] = value
+      } 
+      else if(i >= start && i <= end){
+        arr[i] = value
+        array[i] = value
+      }
+    }
+  )
     console.log("🚀 ~ replacedArray:", replacedArray)
     
     return replacedArray
 }
 
 const testcall = fill([1, 2, 3], 'a');
+
 
 //HOW THE CODE SHOULD LOOK LIKE
 
