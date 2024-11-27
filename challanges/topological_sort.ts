@@ -101,3 +101,34 @@ export default function topologicalSort(
       return this._length;
     }
 }
+
+
+const graph1 = {
+    A: ['B', 'C'],
+    B: ['C', 'D', 'E'],
+    C: ['F'],
+    D: [],
+    E: ['F'],
+    F: [],
+  };
+  topologicalSort(graph1); // ['A', 'B', 'C', 'D', 'E', 'F']
+  
+  const graph2 = {
+    A: ['B', 'C'],
+    B: ['C', 'D'],
+    C: ['D'],
+    D: ['E'],
+    E: ['F'],
+    F: [],
+  };
+  topologicalSort(graph2); // ['A', 'B', 'C', 'D', 'E', 'F']
+  
+  const graph3 = {
+    A: [],
+    B: ['A'],
+    C: ['B'],
+    D: ['C'],
+    E: ['D'],
+    F: ['E'],
+  };
+  topologicalSort(graph3); // ['F', 'E', 'D', 'C', 'B', 'A']
