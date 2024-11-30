@@ -5,13 +5,14 @@ function twoSum(nums: number[], target: number): number[] {
         } 
     }
     for (let i = 0; i < nums.length; i++){
-        for (let j = 1; j < nums.length; j++){
-            const n = nums[j] + nums[i]
-
-            if (n === target){
-                return [i, j]
+        let j = 1
+        do {
+            if(i !== j && (nums[i] + nums[j]) === target){
+                return [i,j]
             }
-        }
+            j++
+
+        }while(j <= nums.length - 1)
     }
 
     return [0]
