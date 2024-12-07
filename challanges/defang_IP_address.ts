@@ -11,7 +11,7 @@ function defangIPaddr(address: string): string {
     }while(j<address.length)
 
     return splittedAddress.join("")
-};
+};  
 
 
 const ipfang = "1.1.1.1"
