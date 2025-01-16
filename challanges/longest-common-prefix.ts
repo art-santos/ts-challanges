@@ -21,6 +21,5 @@ function longestCommonPrefix(strs: string[]) {
    }
 };
 
-console.log(longestCommonPrefix(["ab", "abc", "abcd"])); // Output: "fl"
 
 
