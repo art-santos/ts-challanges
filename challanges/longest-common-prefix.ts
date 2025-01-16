@@ -15,9 +15,7 @@ function longestCommonPrefix(strs: string[]) {
    for (let i = 0; i < strs.length; i++){
     let j = 0
        do {
-        console.log(strs[i][j])
-        console.log(j)
-        console.log("here", byteSize(strs[i]))
+  
         j++
        }while(j <= byteSize[strs[i]])
    }
